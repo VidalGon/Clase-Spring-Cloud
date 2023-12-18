@@ -1,0 +1,16 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: congig-server-demo
+  cloud: 
+   config:
+    server:
+        git:
+          uri: https://github.com/VidalGon/Clase-Spring-Cloud.git
+          username: VidalGon
+          password: 74584397Vg
+          default-label: main
+  profiles:
+    active: git
+    
