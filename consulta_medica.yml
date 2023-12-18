@@ -1,14 +1,14 @@
 spring:
   jpa:
-    properties:
-       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-        ddl-auto: update
-  h2:
-    console:
-      enable: true
+    database: postgresql
+    show-sql: false
+    hibernate:
+      ddl-auto: update
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password: password
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/consulta_medica
+    username: postgres
+    password: 123456
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/consultaMedica
